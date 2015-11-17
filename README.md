@@ -12,4 +12,10 @@ Access your service via curl
 
     curl 'http://localhost:8080/hello/jamp/hello?m=hello&p0=World'
     
+Servlet TestServlet is deployed at /test and demonstrates invoking Service
+using java code. Servlet can be accessed at url /test
+    
+    curl 'http://localhost:8080/hello/test'
+
+
     
