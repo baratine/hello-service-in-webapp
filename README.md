@@ -5,8 +5,8 @@ Build the war file with
 
     mvn clean package
    
-Deploy the war file into a hello context of Tomcat 8.0.28 or better and start 
-Tomcat.
+Deploy the war file into a hello context of Tomcat 8.0.28 or Resin 4.0.46 or better 
+and start the container.
 
 Access your service via curl
 
@@ -18,4 +18,3 @@ using java code. Servlet can be accessed at url /test
     curl 'http://localhost:8080/hello/test'
 
 
-    

@@ -1,6 +1,5 @@
 package com.caucho.examples;
 
-import io.baratine.core.ResultFuture;
 import io.baratine.core.ServiceManager;
 
 import javax.servlet.ServletException;
@@ -20,13 +19,9 @@ public class TestServlet extends HttpServlet
   {
     ServiceManager serviceManager = ServiceManager.current();
 
-    HelloService service
-      = serviceManager.lookup("/hello").as(HelloService.class);
+    HelloServiceSync service
+      = serviceManager.lookup("/hello").as(HelloServiceSync.class);
 
-    ResultFuture<String> result = new ResultFuture();
-
-    service.hello("World", result);
-
-    res.getWriter().println(result.get());
+    res.getWriter().println(service.hello("World"));
   }
 }
