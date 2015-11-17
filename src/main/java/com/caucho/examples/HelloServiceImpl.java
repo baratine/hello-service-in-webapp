@@ -1,4 +1,4 @@
-package web;
+package com.caucho.examples;
 
 import io.baratine.core.Service;
 

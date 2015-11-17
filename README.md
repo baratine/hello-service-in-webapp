@@ -10,6 +10,6 @@ Tomcat.
 
 Access your service via curl
 
-    curl 'http://localhost:8080/hello/jamp/hello?m=hello'
+    curl 'http://localhost:8080/hello/jamp/hello?m=hello&p0=World'
     
     
