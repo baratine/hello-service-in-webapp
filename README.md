@@ -18,3 +18,8 @@ using java code. Servlet can be accessed at url /test
     curl 'http://localhost:8080/hello/test'
 
 
+See index.html for bare bones javascript code that invokes the service,
+receives JSON formatted reply and outputs the greeting onto the html page. 
+
+Navigate to http://localhost:8080/hello/ to see that in action.
+ 
