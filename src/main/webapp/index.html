@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <script>
+    function hello()
+    {
+      var text = document.getElementById("in").value;
+
+      var request = new XMLHttpRequest();
+      request.onreadystatechange = function ()
+      {
+        if (request.readyState != XMLHttpRequest.DONE) {
+
+        }
+        else if (request.status == 200) {
+          var response = JSON.parse(request.responseText);
+          sayHello(response);
+        }
+        else {
+          alert(request.responseText);
+        }
+      };
+
+      var url = document.URL;
+      if (url.indexOf("/index.html") > -1)
+        url = url.substr(0, url.indexOf("/index.html"));
+
+      url = url + '/' + "jamp/hello?m=hello&p0=" + text;
+
+      request.open("GET", url);
+      request.send();
+    }
+
+    function sayHello(response)
+    {
+      document.getElementById("out").value = response.value;
+    }
+
+  </script>
+
+</head>
+<body>
+Enter your name and press submit: <input id="in" type="text"
+                                         onkeypress="if (event.keyCode == 13) hello()">
+
+
+<input type="button" value="submit" onclick="hello()">
+
+<output id="out"></output>
+</body>
+</html>
