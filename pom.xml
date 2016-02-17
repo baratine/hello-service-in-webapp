@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.caucho.examples</groupId>
   <artifactId>hello-service-in-webapp</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>hello Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -13,13 +13,8 @@
     <dependency>
       <groupId>io.baratine</groupId>
       <artifactId>baratine</artifactId>
-      <version>[0.10,)</version>
+      <version>[0.11.1,)</version>
       <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>2.5</version>
     </dependency>
   </dependencies>
 
